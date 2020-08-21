@@ -28,6 +28,10 @@ class ApplicationController < Sinatra::Base
     erb :sign_up
   end
 
+  get '/new_book' do
+    erb :"/book/new_book"
+  end
+
  
   post '/user/login' do
     user = User.find_by(username: params[:username])
