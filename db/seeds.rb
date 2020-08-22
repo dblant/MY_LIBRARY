@@ -1,7 +1,7 @@
 users = [
-  {username: 'Mr.Bojangles', password_digest: 'demjangles'},
-  {username: 'Jane Doe', password_digest: 'buckstopshere'}, 
-  {username: 'The Juice', password_digest: 'isotoner'}
+  {username: 'Mr.Bojangles', password: 'demjangles'},
+  {username: 'Jane Doe', password: 'buckstopshere'}, 
+  {username: 'The Juice', password: 'isotoner'}
 ]
 
 users.each do |u|
