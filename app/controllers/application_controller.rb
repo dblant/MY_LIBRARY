@@ -20,6 +20,7 @@ class ApplicationController < Sinatra::Base
 
   get '/user/:id' do
     @user = User.find_by_id(params[:id])
+    @books = @user.books.all
     # binding.pry
     erb :"user/user_home"
   end

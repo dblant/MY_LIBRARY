@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
 <h1>Welcome <%=@user.username%>!</h1>
+<br>
+<p>YOUR BOOKS:</p>
+<% @books.each_with_index do |book, index| %>
+    <h5><%= index + 1 %>.</h5>
+    <h4>Title: <%= book.title %></h4>
+    <h5> By: <%= book.author %></h5>
+   <h5>Genre: <%= book.genre %></h5>
+
+    <% end %>
 
 
 <br>
