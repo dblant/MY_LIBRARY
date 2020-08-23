@@ -3,7 +3,7 @@ class BooksController < ApplicationController
     
     get '/books' do
         if logged_in?
-        binding.pry
+        # binding.pry
           @user = current_user
           # binding.pry
           @books = @user.books.all
@@ -49,6 +49,14 @@ class BooksController < ApplicationController
       end
   end
 
+
+  delete '/books/:id' do
+    @book = Book.find_by_id(params[:id])
+    if @book.user == current_user
+        @book.delete
+    end
+    redirect '/books'
+end
     
 
 

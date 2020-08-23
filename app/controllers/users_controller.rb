@@ -21,7 +21,7 @@ class UsersController < ApplicationController
         if @user && @user.authenticate(params[:password])
           session[:user_id] = @user.id
           
-          binding.pry
+          # binding.pry
         redirect '/books'
         else
         redirect '/login'

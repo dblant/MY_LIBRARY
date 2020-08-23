@@ -8,11 +8,17 @@
     <h4>Title: <%= book.title %></h4>
     <h5> By: <%= book.author %></h5>
    <h5>Genre: <%= book.genre %></h5>
-   
+
  <p><a href="/books/<%= book.id %>/edit">Edit</a></p>
-   <p> <a href="/new_book">Add a Book</a></p>
-    <% end %>
-   
+ 
+ <form action="/books/<%= book.id %>" method='post'>
+ <input type="hidden" name="_method" value="delete">
+ <input type="submit" value="Delete">
+ 
+ </form>
+ <% end %>
+ 
+ <p> <a href="/new_book">Add a Book</a></p>
 <br>
 
 
